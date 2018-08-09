@@ -28,8 +28,7 @@ for letter in xrange(97,123):
         last_word = entries[-1].text
         
         #save words
-        for entry in entries:
-            all_words.append(entry.text)
+        entries = entries.findAll("div", {"class": "entries"})[0].findAll("a")
             
         #print current url to monitor progress
         page_num += 1
